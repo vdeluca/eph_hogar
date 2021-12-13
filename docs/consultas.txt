@@ -1,0 +1,44 @@
+# Quienes viven de su trabajo en Region Buenos Aires
+SELECT COUNT(AGLOMERADO), V1 FROM `usu_hogar_t420_csv_zip` WHERE `AGLOMERADO` = 33 GROUP BY V1
+# Quienes viven de su trabajo, agrupados por Año y Trimestre
+SELECT ANO4, TRIMESTRE, V1, COUNT(AGLOMERADO) FROM `usu_hogar` WHERE `AGLOMERADO` = 33 GROUP BY ANO4, TRIMESTRE, V1 ORDER BY ANO4, TRIMESTRE
+# UNION
+CREATE TABLE usu_hogar
+SELECT * FROM usu_hogar_t420
+UNION 
+SELECT * FROM usu_hogar_t419
+UNION 
+SELECT * FROM usu_hogar_t418
+UNION 
+SELECT * FROM usu_hogar_t417
+UNION 
+SELECT * FROM usu_hogar_t416
+UNION 
+SELECT * FROM usu_hogar_t320
+UNION 
+SELECT * FROM usu_hogar_t319
+UNION 
+SELECT * FROM usu_hogar_t318
+UNION 
+SELECT * FROM usu_hogar_t317
+UNION 
+SELECT * FROM usu_hogar_t316
+UNION 
+SELECT * FROM usu_hogar_t220
+UNION 
+SELECT * FROM usu_hogar_t219
+UNION 
+SELECT * FROM usu_hogar_t218
+UNION 
+SELECT * FROM usu_hogar_t217
+UNION 
+SELECT * FROM usu_hogar_t216
+UNION 
+SELECT * FROM usu_hogar_t120
+UNION 
+SELECT * FROM usu_hogar_t119
+UNION 
+SELECT * FROM usu_hogar_t118
+UNION 
+SELECT * FROM usu_hogar_t117
+

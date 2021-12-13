@@ -1,0 +1,2 @@
+; http://php.net/upload-max-filesize
+upload_max_filesize = 200M
